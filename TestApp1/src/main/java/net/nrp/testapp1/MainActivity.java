@@ -3,13 +3,24 @@ package net.nrp.testapp1;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
+
+    public View.OnClickListener close = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            finish();
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initializeViews();
     }
     //Hello There!!
 
@@ -19,5 +30,15 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+    public void initializeViews()
+    {
+        Button bstart = (Button)findViewById(R.id.btnStartGame);
+        Button bsettings = (Button)findViewById(R.id.btnSetting);
+        Button bexit = (Button)findViewById(R.id.btnExitApp);
+        Button bprofile = (Button)findViewById(R.id.btnProfile);
+        bexit.setOnClickListener(close);
+    }
+
     
 }
