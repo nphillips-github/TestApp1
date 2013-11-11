@@ -1,5 +1,6 @@
 package net.nrp.testapp1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -12,6 +13,13 @@ public class MainActivity extends Activity {
         @Override
         public void onClick(View view) {
             finish();
+        }
+    };
+    public View.OnClickListener question = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent questionIntent = new Intent(MainActivity.this,QuestionActivity.class);
+            MainActivity.this.startActivity((questionIntent));
         }
     };
 
@@ -33,11 +41,13 @@ public class MainActivity extends Activity {
 
     public void initializeViews()
     {
+        /*To Do: Implement settings and profile buttons*/
         Button bstart = (Button)findViewById(R.id.btnStartGame);
-        Button bsettings = (Button)findViewById(R.id.btnSetting);
+        //Button bsettings = (Button)findViewById(R.id.btnSetting);
         Button bexit = (Button)findViewById(R.id.btnExitApp);
-        Button bprofile = (Button)findViewById(R.id.btnProfile);
+        //Button bprofile = (Button)findViewById(R.id.btnProfile);
         bexit.setOnClickListener(close);
+        bstart.setOnClickListener(question);
     }
 
     
