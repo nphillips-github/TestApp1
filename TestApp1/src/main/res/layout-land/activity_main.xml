@@ -25,21 +25,27 @@
             android:layout_width="fill_parent"
             android:orientation="horizontal"
             android:layout_weight="4"
-            android:paddingTop="15dip">
+            android:paddingTop="15dip"
+            android:gravity="center_horizontal"
+            android:weightSum="10">
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="1dip"
+                    android:gravity="right">
                 <Button
                     android:layout_height="wrap_content"
-                    android:layout_width="300dip"
+                    android:layout_width="fill_parent"
+                    android:minWidth="300dip"
                     android:text="@string/start_button"
-                    android:layout_gravity="center_horizontal"
                     android:id="@+id/btnStartGame"
                     />
                 <Button
                     android:layout_height="wrap_content"
-                    android:layout_width="300dip"
+                    android:layout_width="fill_parent"
+                    android:minWidth="300dip"
                     android:text="@string/profile_button"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/btnProfile"
@@ -48,17 +54,21 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent">
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:padding="1dip">
                 <Button
                     android:layout_height="wrap_content"
-                    android:layout_width="300dip"
+                    android:layout_width="fill_parent"
+                    android:minWidth="300dip"
                     android:text="@string/settings_button"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/btnSetting"
                     />
                 <Button
                     android:layout_height="wrap_content"
-                    android:layout_width="300dip"
+                    android:layout_width="fill_parent"
+                    android:minWidth="300dip"
                     android:text="@string/exit_button"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/btnExitApp"
